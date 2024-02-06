@@ -9,6 +9,23 @@ namespace AutoberlesOKM_CsA
 {
     class FileIO
     {
+        /*
+         * Megprobalja readelni a CSV filet, ha nem letezik a file akkor elkesziti es a def parameternek megadott erteket adja vissza
+         * 
+         * (ha letezik nyilvan bereadeli a filet es visszaadja a contentet)
+         */
+        public static List<string> tryReadCSV(string filename, List<string> def)
+        {
+            if (!File.Exists(filename))
+            {
+                writeFile(filename, def);
+                return def;
+            }
+
+            Console.WriteLine(readFile(filename)[0]);
+            return readFile(filename);
+        }
+
         public static List<string> readFile(string filename)
         {
             List<string> lines = new List<string>();
@@ -16,8 +33,6 @@ namespace AutoberlesOKM_CsA
             try
             {
                 StreamReader reader = new StreamReader(filename, Encoding.UTF8);
-
-                reader.ReadLine();
 
                 while (!reader.EndOfStream)
                 {
@@ -36,8 +51,6 @@ namespace AutoberlesOKM_CsA
             try
             {
                 StreamWriter writer = new StreamWriter(filename);
-
-                writer.WriteLine("név;születési_dátum;nemzetiség;rajtszám");
 
                 foreach (string line in data)
                 {

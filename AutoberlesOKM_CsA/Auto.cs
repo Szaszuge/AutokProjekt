@@ -8,6 +8,8 @@ namespace AutoberlesOKM_CsA
 {
     class Auto
     {
+        public static string CSVHead = "rendszam;tipus;modell;gyarto;kilometer";
+
         string rendszam;
         string tipus;
         string modell;
@@ -39,8 +41,9 @@ namespace AutoberlesOKM_CsA
 
         public static List<string> ToCSV(List<Auto> input)
         {
-            List<string> output = new List<string>();
-            output.Add("rendszam;tipus;modell;gyarto;kilometer");
+            List<string> output = new List<string> {
+                CSVHead
+            };
             output.AddRange(input.Select(x => x.ToString()));
 
             return output;

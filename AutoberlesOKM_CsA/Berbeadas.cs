@@ -8,6 +8,8 @@ namespace AutoberlesOKM_CsA
 {
     class Berbeadas
     {
+        public static string CSVHead = "auto;ugyfel;elvitelkm;visszahozaskm;elviteldatum;visszahozasdatum;osszeg";
+
         string auto;
         string ugyfel;
         int elvitelkm;
@@ -43,8 +45,10 @@ namespace AutoberlesOKM_CsA
 
         public static List<string> ToCSV(List<Berbeadas> input)
         {
-            List<string> output = new List<string>();
-            output.Add("auto;ugyfel;elvitelkm;visszahozaskm;elviteldatum;visszahozasdatum;osszeg");
+            List<string> output = new List<string>
+            {
+                CSVHead
+            };
             output.AddRange(input.Select(x => x.ToString()));
 
             return output;

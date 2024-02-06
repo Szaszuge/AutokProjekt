@@ -8,6 +8,8 @@ namespace AutoberlesOKM_CsA
 {
     class Ugyfel
     {
+        public static string CSVHead = "szemelyi;nev;lakcim";
+
         string szemelyi;
         string nev;
         string lakcim;
@@ -35,8 +37,9 @@ namespace AutoberlesOKM_CsA
 
         public static List<string> ToCSV(List<Ugyfel> input)
         {
-            List<string> output = new List<string>();
-            output.Add("szemelyi;nev;lakcim");
+            List<string> output = new List<string> { 
+                CSVHead
+            };
             output.AddRange(input.Select(x => x.ToString()));
 
             return output;
