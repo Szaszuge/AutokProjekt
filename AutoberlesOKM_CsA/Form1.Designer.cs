@@ -43,7 +43,7 @@ namespace AutoberlesOKM_CsA
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.autokPage = new System.Windows.Forms.TabPage();
             this.autoKmTBOX = new System.Windows.Forms.TextBox();
-            this.autoModellTBOX = new System.Windows.Forms.TextBox();
+            this.autokModellTBOX = new System.Windows.Forms.TextBox();
             this.autokGyartoTBOX = new System.Windows.Forms.TextBox();
             this.autokTipusTBOX = new System.Windows.Forms.TextBox();
             this.autokRendszamTBOX = new System.Windows.Forms.TextBox();
@@ -57,6 +57,9 @@ namespace AutoberlesOKM_CsA
             this.ugyfelekTorolBTN = new System.Windows.Forms.Button();
             this.ugyfelekFelveszBTN = new System.Windows.Forms.Button();
             this.berlesekPage = new System.Windows.Forms.TabPage();
+            this.berlesekVisszahozasKmphTBOX = new System.Windows.Forms.TextBox();
+            this.berlesekElvitelDatumTBOX = new System.Windows.Forms.TextBox();
+            this.berlesekOsszegTBOX = new System.Windows.Forms.TextBox();
             this.berlesekVisszahozasDatumTBOX = new System.Windows.Forms.TextBox();
             this.berlesekElvitelKmphTBOX = new System.Windows.Forms.TextBox();
             this.berlesekUgyfelTBOX = new System.Windows.Forms.TextBox();
@@ -65,10 +68,6 @@ namespace AutoberlesOKM_CsA
             this.berlesekTorolBTN = new System.Windows.Forms.Button();
             this.berlesekFelveszBtn = new System.Windows.Forms.Button();
             this.berlesekGrid = new System.Windows.Forms.DataGridView();
-            this.statButton = new System.Windows.Forms.Button();
-            this.berlesekOsszegTBOX = new System.Windows.Forms.TextBox();
-            this.berlesekVisszahozasKmphTBOX = new System.Windows.Forms.TextBox();
-            this.berlesekElvitelDatumTBOX = new System.Windows.Forms.TextBox();
             this.auto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ugyfel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.elvitelkmh = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,6 +75,7 @@ namespace AutoberlesOKM_CsA
             this.elviteldatum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.visszahozdatum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.osszeg = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.autokGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ugyfelekGrid)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -132,6 +132,7 @@ namespace AutoberlesOKM_CsA
             this.autokFelveszBTN.TabIndex = 2;
             this.autokFelveszBTN.Text = "Felvesz";
             this.autokFelveszBTN.UseVisualStyleBackColor = true;
+            this.autokFelveszBTN.Click += new System.EventHandler(this.autokFelveszBTN_Click);
             // 
             // ugyfelekGrid
             // 
@@ -175,7 +176,7 @@ namespace AutoberlesOKM_CsA
             // autokPage
             // 
             this.autokPage.Controls.Add(this.autoKmTBOX);
-            this.autokPage.Controls.Add(this.autoModellTBOX);
+            this.autokPage.Controls.Add(this.autokModellTBOX);
             this.autokPage.Controls.Add(this.autokGyartoTBOX);
             this.autokPage.Controls.Add(this.autokTipusTBOX);
             this.autokPage.Controls.Add(this.autokRendszamTBOX);
@@ -198,12 +199,12 @@ namespace AutoberlesOKM_CsA
             this.autoKmTBOX.Size = new System.Drawing.Size(205, 20);
             this.autoKmTBOX.TabIndex = 9;
             // 
-            // autoModellTBOX
+            // autokModellTBOX
             // 
-            this.autoModellTBOX.Location = new System.Drawing.Point(578, 353);
-            this.autoModellTBOX.Name = "autoModellTBOX";
-            this.autoModellTBOX.Size = new System.Drawing.Size(205, 20);
-            this.autoModellTBOX.TabIndex = 8;
+            this.autokModellTBOX.Location = new System.Drawing.Point(578, 353);
+            this.autokModellTBOX.Name = "autokModellTBOX";
+            this.autokModellTBOX.Size = new System.Drawing.Size(205, 20);
+            this.autokModellTBOX.TabIndex = 8;
             // 
             // autokGyartoTBOX
             // 
@@ -308,6 +309,7 @@ namespace AutoberlesOKM_CsA
             this.ugyfelekFelveszBTN.TabIndex = 10;
             this.ugyfelekFelveszBTN.Text = "Felvesz";
             this.ugyfelekFelveszBTN.UseVisualStyleBackColor = true;
+            this.ugyfelekFelveszBTN.Click += new System.EventHandler(this.ugyfelekFelveszBTN_Click);
             // 
             // berlesekPage
             // 
@@ -329,6 +331,27 @@ namespace AutoberlesOKM_CsA
             this.berlesekPage.TabIndex = 2;
             this.berlesekPage.Text = "Bérlések";
             this.berlesekPage.UseVisualStyleBackColor = true;
+            // 
+            // berlesekVisszahozasKmphTBOX
+            // 
+            this.berlesekVisszahozasKmphTBOX.Location = new System.Drawing.Point(584, 374);
+            this.berlesekVisszahozasKmphTBOX.Name = "berlesekVisszahozasKmphTBOX";
+            this.berlesekVisszahozasKmphTBOX.Size = new System.Drawing.Size(205, 20);
+            this.berlesekVisszahozasKmphTBOX.TabIndex = 26;
+            // 
+            // berlesekElvitelDatumTBOX
+            // 
+            this.berlesekElvitelDatumTBOX.Location = new System.Drawing.Point(584, 400);
+            this.berlesekElvitelDatumTBOX.Name = "berlesekElvitelDatumTBOX";
+            this.berlesekElvitelDatumTBOX.Size = new System.Drawing.Size(205, 20);
+            this.berlesekElvitelDatumTBOX.TabIndex = 25;
+            // 
+            // berlesekOsszegTBOX
+            // 
+            this.berlesekOsszegTBOX.Location = new System.Drawing.Point(584, 452);
+            this.berlesekOsszegTBOX.Name = "berlesekOsszegTBOX";
+            this.berlesekOsszegTBOX.Size = new System.Drawing.Size(205, 20);
+            this.berlesekOsszegTBOX.TabIndex = 24;
             // 
             // berlesekVisszahozasDatumTBOX
             // 
@@ -384,6 +407,7 @@ namespace AutoberlesOKM_CsA
             this.berlesekFelveszBtn.TabIndex = 17;
             this.berlesekFelveszBtn.Text = "Felvesz";
             this.berlesekFelveszBtn.UseVisualStyleBackColor = true;
+            this.berlesekFelveszBtn.Click += new System.EventHandler(this.berlesekFelveszBtn_Click);
             // 
             // berlesekGrid
             // 
@@ -401,36 +425,6 @@ namespace AutoberlesOKM_CsA
             this.berlesekGrid.Name = "berlesekGrid";
             this.berlesekGrid.Size = new System.Drawing.Size(545, 540);
             this.berlesekGrid.TabIndex = 16;
-            // 
-            // statButton
-            // 
-            this.statButton.Location = new System.Drawing.Point(997, 86);
-            this.statButton.Name = "statButton";
-            this.statButton.Size = new System.Drawing.Size(75, 427);
-            this.statButton.TabIndex = 5;
-            this.statButton.Text = "Statisztika";
-            this.statButton.UseVisualStyleBackColor = true;
-            // 
-            // berlesekOsszegTBOX
-            // 
-            this.berlesekOsszegTBOX.Location = new System.Drawing.Point(584, 452);
-            this.berlesekOsszegTBOX.Name = "berlesekOsszegTBOX";
-            this.berlesekOsszegTBOX.Size = new System.Drawing.Size(205, 20);
-            this.berlesekOsszegTBOX.TabIndex = 24;
-            // 
-            // berlesekVisszahozasKmphTBOX
-            // 
-            this.berlesekVisszahozasKmphTBOX.Location = new System.Drawing.Point(584, 374);
-            this.berlesekVisszahozasKmphTBOX.Name = "berlesekVisszahozasKmphTBOX";
-            this.berlesekVisszahozasKmphTBOX.Size = new System.Drawing.Size(205, 20);
-            this.berlesekVisszahozasKmphTBOX.TabIndex = 26;
-            // 
-            // berlesekElvitelDatumTBOX
-            // 
-            this.berlesekElvitelDatumTBOX.Location = new System.Drawing.Point(584, 400);
-            this.berlesekElvitelDatumTBOX.Name = "berlesekElvitelDatumTBOX";
-            this.berlesekElvitelDatumTBOX.Size = new System.Drawing.Size(205, 20);
-            this.berlesekElvitelDatumTBOX.TabIndex = 25;
             // 
             // auto
             // 
@@ -466,6 +460,15 @@ namespace AutoberlesOKM_CsA
             // 
             this.osszeg.HeaderText = "Összeg";
             this.osszeg.Name = "osszeg";
+            // 
+            // statButton
+            // 
+            this.statButton.Location = new System.Drawing.Point(997, 86);
+            this.statButton.Name = "statButton";
+            this.statButton.Size = new System.Drawing.Size(75, 427);
+            this.statButton.TabIndex = 5;
+            this.statButton.Text = "Statisztika";
+            this.statButton.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -506,7 +509,7 @@ namespace AutoberlesOKM_CsA
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage autokPage;
         private System.Windows.Forms.TextBox autoKmTBOX;
-        private System.Windows.Forms.TextBox autoModellTBOX;
+        private System.Windows.Forms.TextBox autokModellTBOX;
         private System.Windows.Forms.TextBox autokGyartoTBOX;
         private System.Windows.Forms.TextBox autokTipusTBOX;
         private System.Windows.Forms.TextBox autokRendszamTBOX;

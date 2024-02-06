@@ -50,5 +50,64 @@ namespace AutoberlesOKM_CsA
             InitializeComponent();
             Recover();
         }
+
+        private void addToGrid(DataGridView grid, List<TextBox> textBoxes)
+        {
+            List<string> l = new List<string>();
+            textBoxes.ForEach(tbox =>
+            {
+                l.Add(tbox.Text);
+            });
+
+            grid.Rows.Add(l.ToArray());
+        }
+
+        /**
+                              ___  __       
+                     /\  |  |  |  /  \ |__/ 
+                    /~~\ \__/  |  \__/ |  \ 
+         */
+        private void autokFelveszBTN_Click(object sender, EventArgs e)
+        {
+            addToGrid(autokGrid, new List<TextBox> {
+                autokRendszamTBOX,
+                autokTipusTBOX,
+                autokGyartoTBOX,
+                autokModellTBOX,
+                autoKmTBOX,
+            });
+        }
+
+        /**
+                          __       ___  ___       ___      
+                    |  | / _` \ / |__  |__  |    |__  |__/ 
+                    \__/ \__>  |  |    |___ |___ |___ |  \ 
+         */
+        private void ugyfelekFelveszBTN_Click(object sender, EventArgs e)
+        {
+            addToGrid(ugyfelekGrid, new List<TextBox> {
+                ugyfelekSzemelyiTBOX,
+                ugyfelekNevTBOX,
+                ugyfelekLakcimTBOX,
+            });
+        }
+
+        /*
+                     __   ___  __        ___  __   ___      
+                    |__) |__  |__) |    |__  /__` |__  |__/ 
+                    |__) |___ |  \ |___ |___ .__/ |___ |  \ 
+         */
+        private void berlesekFelveszBtn_Click(object sender, EventArgs e)
+        {
+            addToGrid(berlesekGrid, new List<TextBox> {
+                berlesekAutoTBOX,
+                berlesekUgyfelTBOX,
+                berlesekElvitelKmphTBOX,
+                berlesekElvitelDatumTBOX,
+                berlesekVisszahozasKmphTBOX,
+                berlesekVisszahozasDatumTBOX,
+                berlesekOsszegTBOX,
+            });
+        }
     }
 }
