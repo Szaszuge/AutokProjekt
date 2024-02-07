@@ -10,11 +10,11 @@ namespace AutoberlesOKM_CsA
     {
         public static string CSVHead = "rendszam;tipus;modell;gyarto;kilometer";
 
-        string rendszam;
-        string tipus;
-        string modell;
-        string gyarto;
-        int kilometer;
+        public string rendszam;
+        public string tipus;
+        public string modell;
+        public string gyarto;
+        public int kilometer;
 
         public Auto(string s)
         {
@@ -25,6 +25,27 @@ namespace AutoberlesOKM_CsA
             this.modell    = split[2];
             this.gyarto    = split[3];
             this.kilometer = Convert.ToInt32(split[4]);
+        }
+
+        public Auto(params string[] obj)
+        {
+            this.rendszam = obj[0];
+            this.tipus = obj[1];
+            this.modell = obj[2];
+            this.gyarto = obj[3];
+            this.kilometer = Convert.ToInt32(obj[4]);
+        }
+
+        public List<string> toStringList()
+        {
+            return new List<string>
+            {
+                this.rendszam,
+                this.tipus,
+                this.modell,
+                this.gyarto,
+                this.kilometer.ToString(),
+            };
         }
 
         public override string ToString()

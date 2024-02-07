@@ -22,7 +22,6 @@ namespace AutoberlesOKM_CsA
                 return def;
             }
 
-            Console.WriteLine(readFile(filename)[0]);
             return readFile(filename);
         }
 

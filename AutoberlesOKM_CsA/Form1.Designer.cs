@@ -95,7 +95,10 @@ namespace AutoberlesOKM_CsA
             this.modell,
             this.km});
             this.autokGrid.Location = new System.Drawing.Point(0, 0);
+            this.autokGrid.MultiSelect = false;
             this.autokGrid.Name = "autokGrid";
+            this.autokGrid.ReadOnly = true;
+            this.autokGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.autokGrid.Size = new System.Drawing.Size(545, 540);
             this.autokGrid.TabIndex = 0;
             // 
@@ -103,32 +106,37 @@ namespace AutoberlesOKM_CsA
             // 
             this.rendszam.HeaderText = "Rendszám";
             this.rendszam.Name = "rendszam";
+            this.rendszam.ReadOnly = true;
             // 
             // tipus
             // 
             this.tipus.HeaderText = "Típus";
             this.tipus.Name = "tipus";
+            this.tipus.ReadOnly = true;
             // 
             // gyarto
             // 
             this.gyarto.HeaderText = "Gyártó";
             this.gyarto.Name = "gyarto";
+            this.gyarto.ReadOnly = true;
             // 
             // modell
             // 
             this.modell.HeaderText = "Modell";
             this.modell.Name = "modell";
+            this.modell.ReadOnly = true;
             // 
             // km
             // 
             this.km.HeaderText = "Km";
             this.km.Name = "km";
+            this.km.ReadOnly = true;
             // 
             // autokFelveszBTN
             // 
-            this.autokFelveszBTN.Location = new System.Drawing.Point(578, 18);
+            this.autokFelveszBTN.Location = new System.Drawing.Point(551, 6);
             this.autokFelveszBTN.Name = "autokFelveszBTN";
-            this.autokFelveszBTN.Size = new System.Drawing.Size(205, 57);
+            this.autokFelveszBTN.Size = new System.Drawing.Size(246, 57);
             this.autokFelveszBTN.TabIndex = 2;
             this.autokFelveszBTN.Text = "Felvesz";
             this.autokFelveszBTN.UseVisualStyleBackColor = true;
@@ -143,7 +151,10 @@ namespace AutoberlesOKM_CsA
             this.nev,
             this.lakcim});
             this.ugyfelekGrid.Location = new System.Drawing.Point(0, 0);
+            this.ugyfelekGrid.MultiSelect = false;
             this.ugyfelekGrid.Name = "ugyfelekGrid";
+            this.ugyfelekGrid.ReadOnly = true;
+            this.ugyfelekGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ugyfelekGrid.Size = new System.Drawing.Size(545, 540);
             this.ugyfelekGrid.TabIndex = 3;
             // 
@@ -151,16 +162,19 @@ namespace AutoberlesOKM_CsA
             // 
             this.szemelyiSzam.HeaderText = "Személyi";
             this.szemelyiSzam.Name = "szemelyiSzam";
+            this.szemelyiSzam.ReadOnly = true;
             // 
             // nev
             // 
             this.nev.HeaderText = "Név";
             this.nev.Name = "nev";
+            this.nev.ReadOnly = true;
             // 
             // lakcim
             // 
             this.lakcim.HeaderText = "Lakcím";
             this.lakcim.Name = "lakcim";
+            this.lakcim.ReadOnly = true;
             // 
             // tabControl1
             // 
@@ -194,56 +208,58 @@ namespace AutoberlesOKM_CsA
             // 
             // autoKmTBOX
             // 
-            this.autoKmTBOX.Location = new System.Drawing.Point(578, 379);
+            this.autoKmTBOX.Location = new System.Drawing.Point(551, 299);
             this.autoKmTBOX.Name = "autoKmTBOX";
-            this.autoKmTBOX.Size = new System.Drawing.Size(205, 20);
+            this.autoKmTBOX.Size = new System.Drawing.Size(246, 20);
             this.autoKmTBOX.TabIndex = 9;
             // 
             // autokModellTBOX
             // 
-            this.autokModellTBOX.Location = new System.Drawing.Point(578, 353);
+            this.autokModellTBOX.Location = new System.Drawing.Point(551, 273);
             this.autokModellTBOX.Name = "autokModellTBOX";
-            this.autokModellTBOX.Size = new System.Drawing.Size(205, 20);
+            this.autokModellTBOX.Size = new System.Drawing.Size(246, 20);
             this.autokModellTBOX.TabIndex = 8;
             // 
             // autokGyartoTBOX
             // 
-            this.autokGyartoTBOX.Location = new System.Drawing.Point(578, 327);
+            this.autokGyartoTBOX.Location = new System.Drawing.Point(551, 247);
             this.autokGyartoTBOX.Name = "autokGyartoTBOX";
-            this.autokGyartoTBOX.Size = new System.Drawing.Size(205, 20);
+            this.autokGyartoTBOX.Size = new System.Drawing.Size(246, 20);
             this.autokGyartoTBOX.TabIndex = 7;
             // 
             // autokTipusTBOX
             // 
-            this.autokTipusTBOX.Location = new System.Drawing.Point(578, 301);
+            this.autokTipusTBOX.Location = new System.Drawing.Point(551, 221);
             this.autokTipusTBOX.Name = "autokTipusTBOX";
-            this.autokTipusTBOX.Size = new System.Drawing.Size(205, 20);
+            this.autokTipusTBOX.Size = new System.Drawing.Size(246, 20);
             this.autokTipusTBOX.TabIndex = 6;
             // 
             // autokRendszamTBOX
             // 
-            this.autokRendszamTBOX.Location = new System.Drawing.Point(578, 271);
+            this.autokRendszamTBOX.Location = new System.Drawing.Point(551, 195);
             this.autokRendszamTBOX.Name = "autokRendszamTBOX";
-            this.autokRendszamTBOX.Size = new System.Drawing.Size(205, 20);
+            this.autokRendszamTBOX.Size = new System.Drawing.Size(246, 20);
             this.autokRendszamTBOX.TabIndex = 5;
             // 
             // autokModositBTN
             // 
-            this.autokModositBTN.Location = new System.Drawing.Point(578, 189);
+            this.autokModositBTN.Location = new System.Drawing.Point(551, 132);
             this.autokModositBTN.Name = "autokModositBTN";
-            this.autokModositBTN.Size = new System.Drawing.Size(205, 57);
+            this.autokModositBTN.Size = new System.Drawing.Size(246, 57);
             this.autokModositBTN.TabIndex = 4;
             this.autokModositBTN.Text = "Módosít";
             this.autokModositBTN.UseVisualStyleBackColor = true;
+            this.autokModositBTN.Click += new System.EventHandler(this.autokModositBTN_Click);
             // 
             // autokTorolBTN
             // 
-            this.autokTorolBTN.Location = new System.Drawing.Point(578, 103);
+            this.autokTorolBTN.Location = new System.Drawing.Point(551, 69);
             this.autokTorolBTN.Name = "autokTorolBTN";
-            this.autokTorolBTN.Size = new System.Drawing.Size(205, 57);
+            this.autokTorolBTN.Size = new System.Drawing.Size(246, 57);
             this.autokTorolBTN.TabIndex = 3;
             this.autokTorolBTN.Text = "Töröl";
             this.autokTorolBTN.UseVisualStyleBackColor = true;
+            this.autokTorolBTN.Click += new System.EventHandler(this.autokTorolBTN_Click);
             // 
             // ugyfelekPage
             // 
@@ -264,48 +280,50 @@ namespace AutoberlesOKM_CsA
             // 
             // ugyfelekLakcimTBOX
             // 
-            this.ugyfelekLakcimTBOX.Location = new System.Drawing.Point(573, 333);
+            this.ugyfelekLakcimTBOX.Location = new System.Drawing.Point(551, 247);
             this.ugyfelekLakcimTBOX.Name = "ugyfelekLakcimTBOX";
-            this.ugyfelekLakcimTBOX.Size = new System.Drawing.Size(205, 20);
+            this.ugyfelekLakcimTBOX.Size = new System.Drawing.Size(246, 20);
             this.ugyfelekLakcimTBOX.TabIndex = 15;
             // 
             // ugyfelekNevTBOX
             // 
-            this.ugyfelekNevTBOX.Location = new System.Drawing.Point(573, 307);
+            this.ugyfelekNevTBOX.Location = new System.Drawing.Point(551, 221);
             this.ugyfelekNevTBOX.Name = "ugyfelekNevTBOX";
-            this.ugyfelekNevTBOX.Size = new System.Drawing.Size(205, 20);
+            this.ugyfelekNevTBOX.Size = new System.Drawing.Size(246, 20);
             this.ugyfelekNevTBOX.TabIndex = 14;
             // 
             // ugyfelekSzemelyiTBOX
             // 
-            this.ugyfelekSzemelyiTBOX.Location = new System.Drawing.Point(573, 277);
+            this.ugyfelekSzemelyiTBOX.Location = new System.Drawing.Point(551, 195);
             this.ugyfelekSzemelyiTBOX.Name = "ugyfelekSzemelyiTBOX";
-            this.ugyfelekSzemelyiTBOX.Size = new System.Drawing.Size(205, 20);
+            this.ugyfelekSzemelyiTBOX.Size = new System.Drawing.Size(246, 20);
             this.ugyfelekSzemelyiTBOX.TabIndex = 13;
             // 
             // ugyfelekModositBTN
             // 
-            this.ugyfelekModositBTN.Location = new System.Drawing.Point(573, 195);
+            this.ugyfelekModositBTN.Location = new System.Drawing.Point(551, 132);
             this.ugyfelekModositBTN.Name = "ugyfelekModositBTN";
-            this.ugyfelekModositBTN.Size = new System.Drawing.Size(205, 57);
+            this.ugyfelekModositBTN.Size = new System.Drawing.Size(246, 57);
             this.ugyfelekModositBTN.TabIndex = 12;
             this.ugyfelekModositBTN.Text = "Módosít";
             this.ugyfelekModositBTN.UseVisualStyleBackColor = true;
+            this.ugyfelekModositBTN.Click += new System.EventHandler(this.ugyfelekModositBTN_Click);
             // 
             // ugyfelekTorolBTN
             // 
-            this.ugyfelekTorolBTN.Location = new System.Drawing.Point(573, 109);
+            this.ugyfelekTorolBTN.Location = new System.Drawing.Point(551, 69);
             this.ugyfelekTorolBTN.Name = "ugyfelekTorolBTN";
-            this.ugyfelekTorolBTN.Size = new System.Drawing.Size(205, 57);
+            this.ugyfelekTorolBTN.Size = new System.Drawing.Size(246, 57);
             this.ugyfelekTorolBTN.TabIndex = 11;
             this.ugyfelekTorolBTN.Text = "Töröl";
             this.ugyfelekTorolBTN.UseVisualStyleBackColor = true;
+            this.ugyfelekTorolBTN.Click += new System.EventHandler(this.ugyfelekTorolBTN_Click);
             // 
             // ugyfelekFelveszBTN
             // 
-            this.ugyfelekFelveszBTN.Location = new System.Drawing.Point(573, 24);
+            this.ugyfelekFelveszBTN.Location = new System.Drawing.Point(551, 6);
             this.ugyfelekFelveszBTN.Name = "ugyfelekFelveszBTN";
-            this.ugyfelekFelveszBTN.Size = new System.Drawing.Size(205, 57);
+            this.ugyfelekFelveszBTN.Size = new System.Drawing.Size(246, 57);
             this.ugyfelekFelveszBTN.TabIndex = 10;
             this.ugyfelekFelveszBTN.Text = "Felvesz";
             this.ugyfelekFelveszBTN.UseVisualStyleBackColor = true;
@@ -334,76 +352,78 @@ namespace AutoberlesOKM_CsA
             // 
             // berlesekVisszahozasKmphTBOX
             // 
-            this.berlesekVisszahozasKmphTBOX.Location = new System.Drawing.Point(584, 374);
+            this.berlesekVisszahozasKmphTBOX.Location = new System.Drawing.Point(551, 273);
             this.berlesekVisszahozasKmphTBOX.Name = "berlesekVisszahozasKmphTBOX";
-            this.berlesekVisszahozasKmphTBOX.Size = new System.Drawing.Size(205, 20);
-            this.berlesekVisszahozasKmphTBOX.TabIndex = 26;
+            this.berlesekVisszahozasKmphTBOX.Size = new System.Drawing.Size(246, 20);
+            this.berlesekVisszahozasKmphTBOX.TabIndex = 23;
             // 
             // berlesekElvitelDatumTBOX
             // 
-            this.berlesekElvitelDatumTBOX.Location = new System.Drawing.Point(584, 400);
+            this.berlesekElvitelDatumTBOX.Location = new System.Drawing.Point(551, 299);
             this.berlesekElvitelDatumTBOX.Name = "berlesekElvitelDatumTBOX";
-            this.berlesekElvitelDatumTBOX.Size = new System.Drawing.Size(205, 20);
-            this.berlesekElvitelDatumTBOX.TabIndex = 25;
+            this.berlesekElvitelDatumTBOX.Size = new System.Drawing.Size(246, 20);
+            this.berlesekElvitelDatumTBOX.TabIndex = 24;
             // 
             // berlesekOsszegTBOX
             // 
-            this.berlesekOsszegTBOX.Location = new System.Drawing.Point(584, 452);
+            this.berlesekOsszegTBOX.Location = new System.Drawing.Point(551, 351);
             this.berlesekOsszegTBOX.Name = "berlesekOsszegTBOX";
-            this.berlesekOsszegTBOX.Size = new System.Drawing.Size(205, 20);
-            this.berlesekOsszegTBOX.TabIndex = 24;
+            this.berlesekOsszegTBOX.Size = new System.Drawing.Size(246, 20);
+            this.berlesekOsszegTBOX.TabIndex = 26;
             // 
             // berlesekVisszahozasDatumTBOX
             // 
-            this.berlesekVisszahozasDatumTBOX.Location = new System.Drawing.Point(584, 426);
+            this.berlesekVisszahozasDatumTBOX.Location = new System.Drawing.Point(551, 325);
             this.berlesekVisszahozasDatumTBOX.Name = "berlesekVisszahozasDatumTBOX";
-            this.berlesekVisszahozasDatumTBOX.Size = new System.Drawing.Size(205, 20);
-            this.berlesekVisszahozasDatumTBOX.TabIndex = 23;
+            this.berlesekVisszahozasDatumTBOX.Size = new System.Drawing.Size(246, 20);
+            this.berlesekVisszahozasDatumTBOX.TabIndex = 25;
             // 
             // berlesekElvitelKmphTBOX
             // 
-            this.berlesekElvitelKmphTBOX.Location = new System.Drawing.Point(584, 348);
+            this.berlesekElvitelKmphTBOX.Location = new System.Drawing.Point(551, 247);
             this.berlesekElvitelKmphTBOX.Name = "berlesekElvitelKmphTBOX";
-            this.berlesekElvitelKmphTBOX.Size = new System.Drawing.Size(205, 20);
+            this.berlesekElvitelKmphTBOX.Size = new System.Drawing.Size(246, 20);
             this.berlesekElvitelKmphTBOX.TabIndex = 22;
             // 
             // berlesekUgyfelTBOX
             // 
-            this.berlesekUgyfelTBOX.Location = new System.Drawing.Point(584, 322);
+            this.berlesekUgyfelTBOX.Location = new System.Drawing.Point(551, 221);
             this.berlesekUgyfelTBOX.Name = "berlesekUgyfelTBOX";
-            this.berlesekUgyfelTBOX.Size = new System.Drawing.Size(205, 20);
+            this.berlesekUgyfelTBOX.Size = new System.Drawing.Size(246, 20);
             this.berlesekUgyfelTBOX.TabIndex = 21;
             // 
             // berlesekAutoTBOX
             // 
-            this.berlesekAutoTBOX.Location = new System.Drawing.Point(584, 296);
+            this.berlesekAutoTBOX.Location = new System.Drawing.Point(551, 195);
             this.berlesekAutoTBOX.Name = "berlesekAutoTBOX";
-            this.berlesekAutoTBOX.Size = new System.Drawing.Size(205, 20);
+            this.berlesekAutoTBOX.Size = new System.Drawing.Size(246, 20);
             this.berlesekAutoTBOX.TabIndex = 20;
             // 
             // berlesekModositBTN
             // 
-            this.berlesekModositBTN.Location = new System.Drawing.Point(584, 210);
+            this.berlesekModositBTN.Location = new System.Drawing.Point(551, 132);
             this.berlesekModositBTN.Name = "berlesekModositBTN";
-            this.berlesekModositBTN.Size = new System.Drawing.Size(205, 57);
+            this.berlesekModositBTN.Size = new System.Drawing.Size(246, 57);
             this.berlesekModositBTN.TabIndex = 19;
             this.berlesekModositBTN.Text = "Módosít";
             this.berlesekModositBTN.UseVisualStyleBackColor = true;
+            this.berlesekModositBTN.Click += new System.EventHandler(this.berlesekModositBTN_Click);
             // 
             // berlesekTorolBTN
             // 
-            this.berlesekTorolBTN.Location = new System.Drawing.Point(584, 124);
+            this.berlesekTorolBTN.Location = new System.Drawing.Point(551, 69);
             this.berlesekTorolBTN.Name = "berlesekTorolBTN";
-            this.berlesekTorolBTN.Size = new System.Drawing.Size(205, 57);
+            this.berlesekTorolBTN.Size = new System.Drawing.Size(246, 57);
             this.berlesekTorolBTN.TabIndex = 18;
             this.berlesekTorolBTN.Text = "Töröl";
             this.berlesekTorolBTN.UseVisualStyleBackColor = true;
+            this.berlesekTorolBTN.Click += new System.EventHandler(this.berlesekTorolBTN_Click);
             // 
             // berlesekFelveszBtn
             // 
-            this.berlesekFelveszBtn.Location = new System.Drawing.Point(584, 39);
+            this.berlesekFelveszBtn.Location = new System.Drawing.Point(551, 6);
             this.berlesekFelveszBtn.Name = "berlesekFelveszBtn";
-            this.berlesekFelveszBtn.Size = new System.Drawing.Size(205, 57);
+            this.berlesekFelveszBtn.Size = new System.Drawing.Size(246, 57);
             this.berlesekFelveszBtn.TabIndex = 17;
             this.berlesekFelveszBtn.Text = "Felvesz";
             this.berlesekFelveszBtn.UseVisualStyleBackColor = true;
@@ -422,7 +442,10 @@ namespace AutoberlesOKM_CsA
             this.visszahozdatum,
             this.osszeg});
             this.berlesekGrid.Location = new System.Drawing.Point(0, 0);
+            this.berlesekGrid.MultiSelect = false;
             this.berlesekGrid.Name = "berlesekGrid";
+            this.berlesekGrid.ReadOnly = true;
+            this.berlesekGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.berlesekGrid.Size = new System.Drawing.Size(545, 540);
             this.berlesekGrid.TabIndex = 16;
             // 
@@ -430,36 +453,43 @@ namespace AutoberlesOKM_CsA
             // 
             this.auto.HeaderText = "Autó";
             this.auto.Name = "auto";
+            this.auto.ReadOnly = true;
             // 
             // ugyfel
             // 
             this.ugyfel.HeaderText = "Ügyfél";
             this.ugyfel.Name = "ugyfel";
+            this.ugyfel.ReadOnly = true;
             // 
             // elvitelkmh
             // 
             this.elvitelkmh.HeaderText = "Elvitel Km/h";
             this.elvitelkmh.Name = "elvitelkmh";
+            this.elvitelkmh.ReadOnly = true;
             // 
             // visszahozaskmh
             // 
             this.visszahozaskmh.HeaderText = "Visszahozás Km/h";
             this.visszahozaskmh.Name = "visszahozaskmh";
+            this.visszahozaskmh.ReadOnly = true;
             // 
             // elviteldatum
             // 
             this.elviteldatum.HeaderText = "Elvitel dátum";
             this.elviteldatum.Name = "elviteldatum";
+            this.elviteldatum.ReadOnly = true;
             // 
             // visszahozdatum
             // 
             this.visszahozdatum.HeaderText = "Visszahozás dátum";
             this.visszahozdatum.Name = "visszahozdatum";
+            this.visszahozdatum.ReadOnly = true;
             // 
             // osszeg
             // 
             this.osszeg.HeaderText = "Összeg";
             this.osszeg.Name = "osszeg";
+            this.osszeg.ReadOnly = true;
             // 
             // statButton
             // 
@@ -469,6 +499,7 @@ namespace AutoberlesOKM_CsA
             this.statButton.TabIndex = 5;
             this.statButton.Text = "Statisztika";
             this.statButton.UseVisualStyleBackColor = true;
+            this.statButton.Click += new System.EventHandler(this.statButton_Click);
             // 
             // Form1
             // 
@@ -479,6 +510,7 @@ namespace AutoberlesOKM_CsA
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Autóbérlés";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.autokGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ugyfelekGrid)).EndInit();
             this.tabControl1.ResumeLayout(false);

@@ -10,13 +10,13 @@ namespace AutoberlesOKM_CsA
     {
         public static string CSVHead = "auto;ugyfel;elvitelkm;visszahozaskm;elviteldatum;visszahozasdatum;osszeg";
 
-        string auto;
-        string ugyfel;
-        int elvitelkm;
-        int visszahozaskm;
-        string elviteldatum;
-        string visszahozasdatum;
-        int osszeg;
+        public string auto;
+        public string ugyfel;
+        public int elvitelkm;
+        public int visszahozaskm;
+        public string elviteldatum;
+        public string visszahozasdatum;
+        public int osszeg;
 
         public Berbeadas(string s)
         {
@@ -29,6 +29,31 @@ namespace AutoberlesOKM_CsA
             this.elviteldatum     = split[4];
             this.visszahozasdatum = split[5];
             this.osszeg           = Convert.ToInt32(split[6]);
+        }
+
+        public Berbeadas(params string[] obj)
+        {
+            this.auto             = (string)obj[0];
+            this.ugyfel           = (string)obj[1];
+            this.elvitelkm        = Convert.ToInt32(obj[2]);
+            this.visszahozaskm    = Convert.ToInt32(obj[3]);
+            this.elviteldatum     = (string)obj[4];
+            this.visszahozasdatum = (string)obj[5];
+            this.osszeg           = Convert.ToInt32(obj[6]);
+        }
+
+        public List<string> toStringList()
+        {
+            return new List<string>
+            {
+                this.auto,
+                this.ugyfel,
+                this.elvitelkm.ToString(),
+                this.visszahozaskm.ToString(),
+                this.elviteldatum,
+                this.visszahozasdatum,
+                this.osszeg.ToString(),
+            };
         }
 
         public override string ToString()
